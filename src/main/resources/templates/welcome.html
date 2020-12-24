@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Spring Boot Security with Tailwindcss Starter</title>
+    <link rel="stylesheet" href="/css/app.css"/>
+</head>
+<body class="font-sans text-gray-700">
+<main class="bg-gray-100 h-screen">
+    <div class="flex flex-col justify-center h-full items-center">
+        <h1 class="font-extrabold text-4xl text-center mb-4">Spring Boot: Tailwind Starter</h1>
+        <div class="p-4 sm:rounded sm:shadow-lg w-full mx-auto p-4 bg-white max-w-xl">
+            <p class="border sm:rounded-lg p-4 mb-3">
+                This is a starter project which configures Spring Boot for user Authentication and Authorization using Spring Data JPA, Spring Web Security and User Details Strategy. The project is also configured with a frontend scaffold using tailwindcss with assets compiled using gulp.js.
+            </p>
+            <p class="border sm:rounded-lg p-4 mb-3">
+                The authorization and access control is configured to use user->roles->permissions mechanism where permissions are assigned to a role and a user can be given one or more roles, leading to automatic inheritance of all the permissions granted to that role.
+            </p>
+            <div class="text-right">
+                <a th:href="@{/register}" class="bg-red-500 hover:bg-red-600 text-gray-50 rounded-lg py-2 px-4">Register</a>
+                <a th:href="@{/login}" class="bg-indigo-500 hover:bg-indigo-600 text-gray-50 rounded-lg py-2 px-4">Login</a>
+            </div>
+        </div>
+    </div>
+</main>
+</body>
+</html>
