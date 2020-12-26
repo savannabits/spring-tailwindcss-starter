@@ -1,8 +1,8 @@
 package com.savannabits.spring.acl;
 
-import com.savannabits.spring.acl.model.Permission;
-import com.savannabits.spring.acl.model.Role;
-import com.savannabits.spring.acl.model.User;
+import com.savannabits.spring.acl.entity.Permission;
+import com.savannabits.spring.acl.entity.Role;
+import com.savannabits.spring.acl.entity.User;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;

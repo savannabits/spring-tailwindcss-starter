@@ -1,4 +1,4 @@
-package com.savannabits.spring.acl.model;
+package com.savannabits.spring.acl.entity;
 
 import lombok.Data;
 

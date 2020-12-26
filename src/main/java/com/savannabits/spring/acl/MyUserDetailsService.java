@@ -1,6 +1,6 @@
 package com.savannabits.spring.acl;
 
-import com.savannabits.spring.acl.model.User;
+import com.savannabits.spring.acl.entity.User;
 import com.savannabits.spring.acl.repositories.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;

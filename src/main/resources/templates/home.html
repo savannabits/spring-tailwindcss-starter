@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html
+        lang="en"
+        layout:decorate="~{layouts/default}"
+        xmlns="http://www.w3.org/1999/xhtml"
+        xmlns:th="http://www.thymeleaf.org"
+        xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.ultraq.net.nz/thymeleaf/layout ">
+<head>
+    <title>Home</title>
+</head>
+<body class="font-sans text-gray-700">
+<a layout:fragment="header">Home</a>
+<div layout:fragment="content">
+    <p class="border sm:rounded-lg p-4 mb-3">
+        This is a starter project which configures Spring Boot for user Authentication and Authorization using
+        Spring Data JPA, Spring Web Security and User Details Strategy. The project is also configured with a
+        frontend scaffold using tailwindcss with assets compiled using gulp.js.
+    </p>
+    <p class="border sm:rounded-lg p-4 mb-3">
+        The authorization and access control is configured to use user->roles->permissions mechanism where
+        permissions are assigned to a role and a user can be given one or more roles, leading to automatic
+        inheritance of all the permissions granted to that role.
+    </p>
+    <div class="text-right">
+        <a th:href="@{/register}"
+           class="bg-red-500 hover:bg-red-600 text-gray-50 rounded-lg py-2 px-4">Register</a>
+        <a th:href="@{/login}"
+           class="bg-indigo-500 hover:bg-indigo-600 text-gray-50 rounded-lg py-2 px-4">Login</a>
+    </div>
+</div>
+</body>
+</html>

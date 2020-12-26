@@ -11,4 +11,9 @@ public class WelcomeController {
     public String index(Model model) {
         return "welcome";
     }
+    @GetMapping("/home")
+    public String home(Model model) {
+        return "home";
+    }
+
 }
