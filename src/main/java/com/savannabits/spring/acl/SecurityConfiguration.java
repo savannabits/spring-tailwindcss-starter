@@ -38,13 +38,12 @@ public class SecurityConfiguration {
                     .authorizeRequests()
                     .antMatchers("/home").authenticated()
                     .antMatchers("/admin*").hasAuthority("admin.browse")
-                    .antMatchers("/|/login|/register").permitAll()
-                    .antMatchers("/").authenticated()
+                    .antMatchers("/login").anonymous()
+                    .antMatchers("/signup").anonymous()
+                    .antMatchers("/").permitAll()
                     .and()
-                    .formLogin().loginPage("/login").failureUrl("/login-error")
-                    .and()
-                    .logout()
-                    .logoutSuccessUrl("/")
+                    .formLogin()
+                    .loginPage("/login").failureUrl("/login-error")
             ;
         }
     }
