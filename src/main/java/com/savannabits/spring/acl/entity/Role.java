@@ -8,7 +8,7 @@ import java.util.Collection;
 @Entity
 @Data
 public class Role {
-    @Id @GeneratedValue(strategy = GenerationType.AUTO)
+    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
     private String title;
@@ -17,7 +17,7 @@ public class Role {
     @ManyToMany(mappedBy = "roles")
     private Collection<User> users;
 
-    @ManyToMany
+    @ManyToMany(fetch = FetchType.LAZY)
     @JoinTable(
             name = "permission_role",
             joinColumns = @JoinColumn(name = "role_id", referencedColumnName = "id"),
